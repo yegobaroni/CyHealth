@@ -19,7 +19,7 @@ function ShowCase() {
 
 fetch('https://covid-193.p.rapidapi.com/statistics', options)
 	.then(response => response.json())
-	.then(response => console.log(response.response))
+	.then(response => setShowData(response.response))
 	.catch(err => console.error(err));
   }, []);
 
